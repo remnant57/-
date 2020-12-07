@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--지성, 2번째 페이지-->
+<html>
+    
+ <head> 
+    <title>지성</title> 
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<!--지성 페이지의 사용되는 폰트를 외부링크로 가지고옴-->
+  <style>
+    nav ul {display:inline-block; list-style-type: none; padding: 0px; margin: 0%; padding-bottom: 2px; padding-top:2px; overflow: hidden; background-color: rgba(184, 122, 243, 0.836);text-align: center;}
+     li {float: left; border-left:1px solid rgb(255, 255, 255); padding:0 10px;}
+     /*지성 페이지의 메뉴바 css*/ 
+     li a {
+         text-decoration:none;
+         display: block;
+         color: rgb(252, 252, 252);
+         text-align: center;
+         padding: 120px;
+         padding-top: 11px;
+         padding-bottom: 10px; 
+         font-family: 'Jua', sans-serif;
+         font-size: 14pt;
+          /*메뉴바 속에 있는 글씨를 꾸며주는 css입니다*/
+      }
+     li a:hover {color: #ffffff; background-color: rgba(187, 94, 199, 0.842);}
+      /*메뉴바에 커서를 올려놓으면 그 선택된 메뉴바의 색상이 위에 지정된 색으로 보임*/
+     li:first-child{border-left:none;} 
+     body{font-family: 'Jua', sans-serif;}
+     header h1 {font-size: 38pt; margin-top: 20px; margin-bottom: 3px;}
+     header h3 {font-size: 17pt; margin-top: 2px; margin-bottom: 2px;}
+     /*<h1>과<h3>의 폰트사이즈와 위,아래공간설정*/
+     @keyframes textColorAnimation{ 0%{color:pink}
+        30%{color: hotpink}
+        100%{color:slateblue}}
+     h3{animation-name: textColorAnimation;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;2}
+         /*지성 타이틀 밑에 <h3>해쉬태그로 작성된 내용의 색상이 hotpink와 slateblue로 5초간격으로 바뀌는 효과입니다*/
+     
+  </style>
+ </head>
+ <body bgcolor= "ivory" style="text-align:center">
+    <!--지성페이지의 전체적인 배경 색상은 아이보리, 글씨는 중앙-->
+ 
+    <header>
+      <h1> 지성</h1>
+      <h3>#촉촉 #속건조 #수분부족형</h3>
+    </header>
+
+    <hr>
+     <nav>
+         <ul>
+            <li><a href="지성_클렌징.html" target="추가페이지">클렌징</a></li>
+            <li><a href="지성_스킨토너.html" target="추가페이지">스킨/토너</a></li>
+            <li><a href="지성_세럼.html" target="추가페이지">세럼</a></li>
+            <li><a href="지성_로션.html" target="추가페이지">로션</a></li>
+            <!--지성페이지의 메뉴바 섹션, 파트를 클릭하면 그에 맞는 이미지2개가 나타납니다-->
+    </ul>
+   </nav>
+
+   <p style="font-size: 15pt; color:rgba(89, 56, 121, 0.836); text-align: left; padding-left: 40pt;"> 
+      ** 주의 해야할 성분: 트리클로산,옥시벤존<br>
+      ** 도움 되는 성분: 녹차추출물,티트리,스페인감초
+      <!--메뉴바 밑에 지성이 주의해야할성분과 도움되는 성분을 적어놓았습니다-->
+   </p>
+ 
+<aside> 
+    <div id="주문서" style="width:40%; height:500px; border:0px solid black; margin-top: 10pt; float:right ">
+      <!--aside으로 섹션을 나누었고, 오른쪽에 보이는 주문서의 기본적인 틀, border를 보이지 않게했고, 글씨 색상은 블랙-->  
+      <div id="iframe" style="font-size: 20px; text-align: left; ">
+         <script src='지성javascript.js'></script>
+        <br>   <span style="font-size: 25px;"><주문서></span> <br>
+      <!--주문서는 div iframe을 사용해서 섹션을 나누었고, 주문서에는 자바를 사용- 자바파일은 따로 만들어 링크첨부-->     
+         "구매하고자 하시는 화장품의 개수를 입력하시면 <br> 가격을 알려드립니다~!"<br><br>
+
+<form name="orderform" action="주문서.php" method="POST"></form>
+<!--주문서이기 때문에 사용자가 내용을 작성하면 총가격을 알 수 있도록 설정, 그러나 실제로 주문이 되지는 않습니다. -->
+    
+    
+    <div class="field">
+    # 녹두 약산성 클렌징 폼: <input type="text" id="cleansing1" name="녹두 약산성 클렌징 폼" value="0"  
+        onchange="updateOrder();"/></div>
+    <div class="field">
+    # 퓨어 밸런싱 클렌징 오일: <input type="text" id="cleansing2" name="퓨어 밸런싱 클렌징 오일" value="0"
+        onchange="updateOrder();"/></div>
+    <div class="field">
+     # 1025 독도 토너: <input type="text" id="cleansing3" name="1025 독도 토너" value="0"
+                onchange="updateOrder();"/></div>
+    <div class="field">
+     # 웰빙 녹차 스킨: <input type="text" id="cleansing4" name="웰빙 녹차 스킨" value="0"  
+                onchange="updateOrder();"/></div>
+    <div class="field">
+     # 다이브인 저분자 히알루론산 세럼: <input type="text" id="cleansing5" name="다이브인 저분자 히알루론산 세럼" value="0"  
+                               onchange="updateOrder();"/></div>
+    <div class="field">
+     # 그린티 씨드 세럼: <input type="text" id="cleansing6" name="그린티 씨드 세럼" value="0"  
+                               onchange="updateOrder();"/></div>
+    <div class="field">
+     # 더 심플 데일리 로션: <input type="text" id="cleansing7" name="더 심플 데일리 로션" value="0"  
+                               onchange="updateOrder();"/></div>
+    <div class="field">
+     # 울트라 페이셜 모이스처라이징 로션: <input type="text" id="cleansing8" name="울트라 페이셜 모이스처라이징 로션" value="0"  
+                               onchange="updateOrder();"/></div>
+    <!--지성파트에 있는 모든 화장품명을 적어서 그 옆에 자신이 원하는 개수를 적으면 자동적으로 총값이 계산됩니다-->
+    <div class="field">
+    Total: <input type="text" id="total" name="total" value="" readonly="readonly" /></div> <br>
+    <div class="field">
+      <input type="button" value="총 가격 계산" onclick="placeOrder(this.form);" style="font-size: 17px;"/><br>
+   <!--총 가격을 계산해주는 버튼, 하지만 버튼을 눌러도 다른 페이지로는 넘어가지 않고 가격만 확인가능합니다. --> 
+   </form>
+
+</div> 
+</aside>
+
+   <section>
+    <iframe height="500" width="650" name="추가페이지" style="border:none; margin-left: 60px; margin-top: 5px; float:left;width:55%;" scrolling=no ></iframe>
+   </section>
+
+   <footer>
+   <a href="../Index.html" target="_self"  style="float: right; margin-right: 50px; color:rgba(89, 56, 121, 0.836); font-size: 20px;">   메인페이지GO   </a>
+<!--지성 페이지에서 메인페이지go라는 글씨를 클릭하면 메인페이지로 넘어갈수있도록 설정-->  
+</footer>
+
+   </body>
+  </html>

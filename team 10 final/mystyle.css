@@ -1,0 +1,18 @@
+body{
+    background-image: url(./Photo/배경.jpg);
+    background-size: cover;
+    /*메인페이지의 전체적인 배경을 cover로 설정함*/
+}
+
+.btn{
+    width: 200px;
+    height: 100px;
+    border: 2px solid #658DDB;
+    background-color: #FECFFD;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    /*메인페이지의 버튼 style css*/
+}

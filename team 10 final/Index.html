@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--메인페이지-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Main Page</title>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <!--body의 배경과 버튼css파일-->
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+         <!--메인페이지의 글씨체를 link로 끌어옴-->
+        <style type="text/css">
+        h1,.btn{font-family: 'Jua', sans-serif;}
+        .btn{transition:font-size 3s}
+        .btn:hover{font-size: 300%;}
+        /*마우스를 버튼에 올리면 버튼의 글씨가 3초안에 커지고 마우스는 내리면 작아집니다.*/
+        </style>
+    </head>
+       
+    <body>
+        <!--본문시작-->
+        <h1 style="text-align:center; font-size: 80px;"> < 내 피부에 맞는 화장품은? ></h1>
+    <center >
+        <video controls>
+            <source src="./video/동영상.mp4">
+            <!--메인페이지들어가면 보이는 피부타입관련 동영상, control을 사용해서 사용자가 스스로 재생시킬 수 있도록 함-->
+        </video>
+        <br>
+        <br>
+        <input class="btn" type="button" name="지성" value="지성" onclick="location.href='지성 페이지/지성 메인.html'">
+        <input class="btn" type="button" name="건성" value="건성" onclick="location.href='건성 페이지/건성 메인.html'">
+        <input class="btn" type="button" name="민감성" value="민감성" onclick="location.href='민감성 페이지/민감성 메인.html'">
+        <!--class로 분류해서 css가 적용되도록 설정했고, 버튼을 클릭했을때 지성,건성,민감성으로 넘어갈수 있도록 설정-->
+    </center>
+    <!--메인페이지 끝-->
+    </body>
+</html>
